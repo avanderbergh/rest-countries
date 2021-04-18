@@ -1,5 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { mode } from "./stores";
+  import Header from "./components/Header.svelte";
   export let date: string;
 
   onMount(async () => {
@@ -9,7 +11,13 @@
   });
 </script>
 
-<main>
-  <h1>Rest Countries</h1>
+<main class={$mode}>
+  <Header/>
   <p>{date ? date : 'Loading date...'}</p>
 </main>
+
+<style>
+  main {
+    height: 100%;
+  }
+</style>
