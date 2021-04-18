@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { mode } from "./stores";
   import Header from "./components/Header.svelte";
+  import CountryList from "./components/CountryList.svelte";
   export let date: string;
 
   onMount(async () => {
@@ -13,11 +14,11 @@
 
 <main class={$mode}>
   <Header/>
-  <p>{date ? date : 'Loading date...'}</p>
+  <CountryList/>
 </main>
 
 <style>
   main {
-    height: 100%;
+    min-height: 100%;
   }
 </style>

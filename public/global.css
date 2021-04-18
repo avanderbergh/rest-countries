@@ -8,6 +8,8 @@
   --text-dark: hsl(0, 0%, 100%);
   --text-light: hsl(200, 15%, 8%);
   --input-light: hsl(0, 0%, 52%);
+
+  --shadow-level-1: .1rem .1rem .5rem rgba(0,0,0,.1), -.05rem -.05rem .2rem rgba(0,0,0,.5);
 }
 
 body {
@@ -33,11 +35,14 @@ body {
 main {
   background-color: var(--background);
   color: var(--text);
+
+  transition: background-color 1s, color 1s;
 }
 
 button {
   color: var(--text);
   font-size: 1rem;
   font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
   outline: none;
 }
